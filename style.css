@@ -1,0 +1,83 @@
+body,
+html {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "ele0 ele0 ele0 ele0 ele0 ele0"
+    "ele1 ele1 ele1 ele1 ele1 ele1"
+    "ele2 ele2 ele2 ele2 ele3 ele3"
+    "ele4 ele4 ele5 ele5 ele6 ele6"
+    "ele7 ele7 ele7 ele8 ele8 ele8";
+}
+
+.container > div {
+  /* background-color: #eee; */
+  padding: 10px;
+  /* height: 10px;
+  width: auto; */
+  margin: 5px;
+}
+
+h1 {
+  color: white;
+  /* text-align: center;
+  line-height: 20px; */
+}
+
+.item1 {
+  height: 30vh;
+  grid-area: ele1;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item2 {
+  grid-area: ele2;
+  background-color: #ddd;
+  height: 25vh;
+}
+
+.item3 {
+  grid-area: ele3;
+  background-color: white;
+  height: 25vh;
+}
+
+.item4 {
+  grid-area: ele4;
+  background-color: yellow;
+  height: 15vh;
+}
+
+.item5 {
+  grid-area: ele5;
+  background-color: pink;
+  height: 15vh;
+}
+
+.item6 {
+  grid-area: ele6;
+  background-color: aqua;
+  height: 15vh;
+}
+
+.item7 {
+  grid-area: ele7;
+  background-color: blue;
+  height: 8vh;
+}
+
+.item8 {
+  grid-area: ele8;
+  background-color: yellow;
+  height: 8vh;
+}
