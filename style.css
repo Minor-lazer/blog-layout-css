@@ -1,15 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap");
+
 body,
 html {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  font-family: "Lato", sans-serif;
 }
 
 .container {
   display: grid;
   grid-template-areas:
+    "nav nav nav nav nav nav"
     "ele0 ele0 ele0 ele0 ele0 ele0"
     "ele1 ele1 ele1 ele1 ele1 ele1"
     "ele2 ele2 ele2 ele2 ele3 ele3"
@@ -25,25 +29,97 @@ html {
   margin: 5px;
 }
 
+/* Navbar */
+.nav {
+  display: flex;
+  grid-area: nav;
+
+  height: 5vh;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.center header {
+  color: yellow;
+}
+
+.left,
+.right {
+  display: flex;
+}
+
+li {
+  padding: 10px;
+  list-style: none;
+  color: white;
+}
+
+ul {
+  list-style-image: url("images/fb.svg");
+  padding: 5px;
+  list-style: none;
+  color: white;
+}
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-content: center;
+}
+.center h3 {
+  margin: 0;
+}
 h1 {
   color: white;
-  /* text-align: center;
-  line-height: 20px; */
+  /* width: 200px; */
+  /* height: 150px; */
+
+  /* background-color: gray; */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+h3 {
+  color: white;
 }
 
 .item1 {
-  height: 30vh;
+  height: 40vh;
   grid-area: ele1;
   background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Item2 Designing */
+.item2 {
+  grid-area: ele2;
+  background-color: #ddd;
+  height: 35vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.item2 {
-  grid-area: ele2;
-  background-color: #ddd;
-  height: 25vh;
+.item2 .circle {
+  padding: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 120px;
+  background-color: white;
+  background-image: url("images/lay.svg");
+  background-position: center;
+  background-size: 50%;
+  background-repeat: no-repeat;
+}
+
+.welcome {
+  font-size: 30px;
 }
 
 .item3 {
@@ -52,32 +128,67 @@ h1 {
   height: 25vh;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* Cars Design */
 .item4 {
   grid-area: ele4;
-  background-color: yellow;
-  height: 15vh;
+  height: 65vh;
+  background-size: cover;
+  object-fit: cover;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
 }
 
 .item5 {
   grid-area: ele5;
-  background-color: pink;
-  height: 15vh;
+  height: 65vh;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
 }
 
 .item6 {
   grid-area: ele6;
-  background-color: aqua;
-  height: 15vh;
+  height: 65vh;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.card header {
+  color: aqua;
 }
 
 .item7 {
   grid-area: ele7;
-  background-color: blue;
   height: 8vh;
 }
 
+/* .item7 .img {
+  height: 1vh;
+  width: 90%;
+} */
+/* .item7,
+.item8 {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-content: center;
+} */
 .item8 {
   grid-area: ele8;
-  background-color: yellow;
-  height: 8vh;
+  /* height: 20vh; */
+}
+.item7 img,
+.item8 img {
+  height: 200px;
+  /* height: auto; */
+  width: 100%;
+  object-fit: cover;
+}
+
+.container .item1 .nav .left .fb {
+  background-image: url("images/fb.svg");
 }
